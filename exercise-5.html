@@ -1,0 +1,45 @@
+<!-- 
+1.  use Javascript to add a <button> containing the text "Click Me" inside the button
+2.  use Javascript to change the title of the webpage that shows up in the tabs
+    (use google to find the code)
+3.  Reverse the order of the three todo items on the  webpage by re-arrangin theJavascript code.
+    Notice how instructions are run one by one and elements are also created one by one. -->
+
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <script>
+            let message = 'Click Me';
+
+            button = document.createElement('button');
+            button.innerText = message;
+            document.body.appendChild(button);
+
+            document.title = 'Javascript Exercise 5';
+
+            let todo1= 'Get groceries';
+            let todo2= 'Wash car';
+            let todo3= 'Make dinner';
+            
+            
+
+            function addTodo() {
+                let element = document.createElement('div');
+                element.innerText = todo1;
+                document.body.appendChild(element);
+            }
+
+            addTodo();
+
+            element = document.createElement('div');
+            element.innerText = todo3;
+            document.body.appendChild(element);
+
+            element = document.createElement('div');
+            element.innerText = todo2;
+            document.body.appendChild(element);
+        </script>
+    </body>
+</html>
