@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>
+            Javascript Exercise 7
+        </title>
+        <body>
+            <script>
+                // write function "toUpper" that takes 1 parameter, an array of strings
+                // and console.logs a new array with all the strings capitalized. (hint:
+                // create a new array and push onto the array. Example: toUpper(['hello', 'world']))
+                // => "['HELLO', 'WORLD']"
+
+                function toUpper(stringArr) {
+                    let result = []
+
+                    stringArr.forEach(function (str) {
+                        result.push(str.toUpperCase());
+                    });
+                    console.log(result);
+                }
+
+                toUpper(['samsudin', 'abdullah']);
+
+                // write a function "arrayDouble" that takes an array and console.logs
+                // a new array with every value repeated twice.
+                // Example : arrayDouble(['bark', 'meow']) => "['bark', 'bark', 'meow', 'meow']"
+
+                function arrayDouble(stringArr) {
+                    let result = []
+
+                    stringArr.forEach(function (str) {
+                        
+                        // result.push(str)
+
+                        for ( let i = 0; i < 2; i++ ) {
+                        result.push(str)
+                        }
+
+                    });
+
+                    console.log(result);
+                }
+
+                arrayDouble(['bark', 'meow']);
+
+                // write a function "arraySum" that takes an aray of numbers and console.logs
+                // the sum of the numbers. (hint: creaete a variable and increase its value like this):
+                // let total = 0;
+                // total = total + 10;
+                // Example: arraySum([1, 2, 3]); => "6"
+
+                // first method using reduce
+
+                function arraySum(numArr) {
+                    let result = []
+                    
+                    numArr.forEach(function (num) {
+                        result.push(num)
+                    })
+                    console.log(result.reduce((a, b) => a + b, 0))
+                }
+
+                arraySum([2 , 3 , 4 , 5]);
+
+                // second method
+
+                function arraySum(numArray) {
+                    let total = 0;
+
+                    numArray.forEach(function (num) {
+                        total = total + num;
+                    });
+
+                    console.log(total);
+                }
+                arraySum([1 , 2 , 3]);
+                arraySum([5, -2, 7, 0]);
+            </script>
+        </body>
+    </head>
+</html>
